@@ -8,9 +8,17 @@ Entirely based on the [Libsass Maven Plugin](https://gitlab.com/haynes/libsalss-
 How to use
 ============
 
-Clone the original project at https://raw.githubusercontent.com/wro4j/wro4j-runner
+- Updated to support ECMAScript6
+   - `preProcessors=googleClosureEcma6`
+- Customized to compiles SASS/SCSS
+   - `preProcessors=scssCssImport`
+   - `postProcessors=scssCssCompiler,yuiCSSCompressor`
 
-Replace the files with  this project.
+New flags to use on Runner:
+
+- groupParallel: Turns on the parallel group processing of resources. This value is false by default.
+- cssOnly: When true, Ignore JS files on group parallel processing, useful when you do not spend time processing JS files on processors
+
 
 
 Building
@@ -23,3 +31,9 @@ Considerations
 ============
 
 If you have any problems or understand that the content cannot be shared here, open an issue and I will resolve.
+
+Thanks
+============
+
+Thank you very much 
+https://raw.githubusercontent.com/wro4j/wro4j-runner
